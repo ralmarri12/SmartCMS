@@ -2,8 +2,8 @@ SmartCMS (Enjazy)
 ===========================
 Database tables:
 
-users:
--- id  (int(11) AUTO_INCREMENT Primary key)
+users: \n
+-- id  (int(11) AUTO_INCREMENT Primary key) \n
 -- username (varchar(20))
 -- password	(varchar(32))
 -- fullname (varchar(20))
