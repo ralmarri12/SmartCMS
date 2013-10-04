@@ -2,3 +2,4 @@ SmartCMS
 ========
 
 SmartCMS
+by Rashid
