@@ -8,7 +8,7 @@
 	
 		<h3>Settings:</h3>
 		<ul>
-			<li><a href="general.pp">General Settings</a></li>
+			<li><a href="general.php">General Settings</a></li>
 		</ul>
 	
 	</body>
