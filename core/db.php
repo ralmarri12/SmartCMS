@@ -20,6 +20,10 @@ $db = new PDO("mysql:host=".$config['db']['host'].";dbname=".$config['db']['dbna
 //Setting errors attribute
 $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
+//Executing general information
+$infoq = $db->prepare("SELECT * FROM `settings`");
+$infoq->execute();
+$info = $infoq->fetch(PDO::FETCH_ASSOC);
 
 
 ?>
