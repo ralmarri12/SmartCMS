@@ -34,6 +34,8 @@
 			<input type="submit">
 			
 		</form>
+		
+		<a href="index.php">Setting home page</a>
 	
 	</body>
 
