@@ -36,6 +36,7 @@
 		</form>
 		
 		<a href="index.php">Setting home page</a>
+		<a href="index.php">Setting home page</a>
 	
 	</body>
 
