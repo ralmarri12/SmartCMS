@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 04, 2013 at 11:57 AM
+-- Generation Time: Oct 04, 2013 at 01:34 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -91,6 +91,25 @@ CREATE TABLE IF NOT EXISTS `sections` (
 INSERT INTO `sections` (`id`, `name`) VALUES
 (1, 'test'),
 (3, 'Section 2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE IF NOT EXISTS `settings` (
+  `title` varchar(30) NOT NULL,
+  `desc` text NOT NULL,
+  `keywords` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`title`, `desc`, `keywords`) VALUES
+('default 3', 'default description\r\naddmore', 'default,key,words\r\ntest');
 
 -- --------------------------------------------------------
 
