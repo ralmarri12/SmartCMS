@@ -1,0 +1,15 @@
+*{margin: 0 auto}
+body{background: #f1f1f1}
+#warp{width: 90%}
+#navbar{height: 70px;background: #0bc0d3;border-bottom: 7px #0aa9ba solid}
+#navbar ul {list-style:none;padding:0}
+#navbar ul li{float:left;font-family: 'Economica', sans-serif;color:#fff;
+font-size: 27px; padding: 19px 20px 20px 20px}
+#navbar ul li:hover{background: #10cbdf;text-shadow: 0px 15px 0px #1fd2e5}
+#header{background: #393939;border-bottom: 7px #4e4e4e solid}
+#header h1 {color: #fff; font-size: 50px; font-family: 'Cookie', cursive;padding: 12px;
+text-shadow: 1px 1px 1px #000}
+.icons {float: right}
+.icons ul {list-style:none}
+.icons ul li{padding: 10px 0 0 0;float:left;color: #cdcdcd;font-size: 20px}
+.icons ul li:hover {color: #727272}
