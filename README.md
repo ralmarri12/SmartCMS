@@ -1,4 +1,4 @@
 SmartCMS (Enjazy)
 ===========================
-written by: Rashid AL Marri
----------------------------
+## Next steps:
+*using bs 

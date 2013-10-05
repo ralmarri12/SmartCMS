@@ -22,6 +22,8 @@
 
 	<body>
 	
+		<a href="index.php">Setting </a> - Genaral Settings
+	
 		<h2>General Settings:</h2>
 		<hr>
 		<form action="general.php" method="post">
@@ -35,8 +37,6 @@
 			
 		</form>
 		
-		<a href="index.php">Setting home page</a>
-		<a href="index.php">Setting home page</a>
 	
 	</body>
 
