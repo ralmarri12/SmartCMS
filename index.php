@@ -47,7 +47,7 @@ $posts = new sPost('posts',1);
 		<!-- Header -->
 		<div id="header">
 			<div class="container">
-					<h1>Enjazy</h1>
+					<h1>SmartCMS</h1>
 			</div>
 		</div>
 		<!-- /Header -->
@@ -75,7 +75,7 @@ $posts = new sPost('posts',1);
 			echo '
 			<div class="post-container" style="background-image: url(\'images/Eiffel-Tower.jpg\');">
 				<header class="post-content">
-					<h1>'.$post[$i]['subject'].'</h1>
+					<h1><a href="#">'.$post[$i]['subject'].'</a></h1>
 					<p>
 						'.$post[$i]['content'].'
 					</p>
