@@ -79,7 +79,9 @@ $posts = new sPost('posts',1);
 					<p>
 						'.$post[$i]['content'].'
 					</p>
+					
 					<footer class="post-options">
+						<hr class="line">
 						<div class="post-option-left">
 						<p><a href="#">comments(5)</a></p>
 						</div>
