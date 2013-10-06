@@ -1,6 +1,14 @@
-
 <?php
-//<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+
+require_once('core/db.php');
+require_once('languages/error.php');
+require_once('core/API/users.php');
+require_once('core/API/posts.php');
+require_once('core/API/sections.php');
+require_once('core/init.php');
+
+$posts = new sPost('posts',1);
+
 
 ?>
 <!DOCTYPE html>
@@ -43,40 +51,62 @@
 		<!-- /Header -->
 	
 		<!-- Navbar -->
-			<div id="navbar">
+		<div id="navbar">
 			<div class="container">
-			<ul>
-				<li><i class="icon-home"></i></li>
-				<li>Services</li>
-				<li>Our Work</li>
-				<li>About Us</li>
-				<li>Contact Us</li>
-			</ul>
+				<ul>
+					<li><i class="icon-home"></i></li>
+					<li>Services</li>
+					<li>Our Work</li>
+					<li>About Us</li>
+					<li>Contact Us</li>
+				</ul>
 			</div>
-			</div>
+		</div>
 		<!-- /Navbar -->
-		<div class="container">
+		
+		
 			
-			<!-- Post format -->
-			<div class="post-container" style="background-image: url('images/Eiffel-Tower.jpg');">
+
+
+		<!-- Post format -->
+		
+		
+		<div class="container">
+		<?php
+		$post = $posts->getAllPosts();
+		for($i = 0; $i < count($post);$i++){
+			echo '
+			<div class="post-container" style="background-image: url(\'images/Eiffel-Tower.jpg\');">
 				<header class="post-content">
-					<h1>Hello world!</h1>
+					<h1>'.$post[$i]['subject'].'</h1>
 					<p>
-					This is a template for a simple marketing or informational website.
-					It includes a large callout called the hero unit and three supporting pieces of content.
-					Use it as a starting point to create something more unique.
-					This is a template for a simple marketing or informational website.
-					It includes a large callout called the hero unit and three supporting pieces of content.
-					Use it as a starting point to create something more unique.
+						'.$post[$i]['content'].'
 					</p>
 					<footer class="post-options">
-						<p>comments(5) - facebook - twitter - email</p>
+						<div class="post-option-left">
+						<p><a href="#">comments(5)</a></p>
+						</div>
+						
+						<div class="post-option-right">
+							<div class="icons">
+								<ul>
+									<li><i class="icon-facebook-squared"></i></li>
+									<li><i class="icon-twitter"></i></li>
+									<li><i class="icon-gplus"></i></li>
+									<li><i class="icon-rss-alt"></i></li>
+								</ul>
+							</div>
+						</div>
+						
 					</footer>
 				</header>
 			</div>
-			<!-- /Post format -->
-			
+			';
+		}
+		?>
 		</div>
+		<!-- /Post format -->
+		
 	</body>
 
 

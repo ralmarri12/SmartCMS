@@ -69,6 +69,19 @@ class sPost
 		
 	}
 	
+	public function getAllPosts(){
+            global $db;
+			
+            $query = $db->prepare("SELECT * FROM `".$this->table."`");
+            $query->execute();
+
+            if($query->rowCount() > 0)
+                    return $query->fetchAll();
+            else
+                    return false;
+	}
+	
+	
 	private function _postExsist($id){
 		global $db;
 		$id = (int)$id;

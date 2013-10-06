@@ -1,14 +1,14 @@
 *{margin:0}
 body {background: #f9f9f9;margin:0;}
-#navbar{height: 70px;background: #0bc0d3;border-bottom: 7px #0aa9ba solid}
+#navbar{height: 70px;background: #0bc0d3;border-bottom: 5px #0aa9ba solid;}
 #navbar ul {list-style:none;padding:0}
 #navbar ul li{float:left;font-family: 'Economica', sans-serif;color:#fff;
-font-size: 27px; padding: 19px 20px 20px 20px}
-#navbar ul li:hover{background: #10cbdf;text-shadow: 0px 15px 0px #1fd2e5}
-#header{background: #393939;border-bottom: 7px #4e4e4e solid}
+font-size: 27px; padding: 19px 20px 20px 20px;}
+#navbar ul li:hover{background: #10cbdf;text-shadow: 0px 15px 0px #1fd2e5;border-bottom: 5px red	 solid}
+#header{background: #393939;border-bottom: 4px #4e4e4e solid}
 #header h1 {color: #fff; font-size: 50px; font-family: 'Cookie', cursive;padding: 12px;
 text-shadow: 1px 1px 1px #000}
-.icons {float: right}
+.icons {height: 30px}
 .icons ul {list-style:none}
 .icons ul li{padding: 10px 0 0 0;float:left;color: #cdcdcd;font-size: 20px}
 .icons ul li:hover {color: #727272}
@@ -18,6 +18,10 @@ text-shadow: 1px 1px 1px #000}
 width: 95%;
 margin: 0 auto
 }
+
+
+
+
 
 .post-container {
 margin: 10px auto;
@@ -33,6 +37,21 @@ background-repeat:no-repeat;
 background-position:right;
 background-size: 30% 100%;
 }
+
+.post-container footer:after 
+{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; 
+}
+
+.post-container footer .post-option-left {float: left}
+.post-container footer .post-option-left p  a{
+color: #cdcdcd;font-family: Tahoma, Arial, Helvetica, sans-serif; text-decoration: none}
+.post-container footer .post-option-left p  a:hover{color: #727272}
+.post-container footer .post-option-right {float: right; margin-right: 15px}
 
 .post-content {width:70%}
 .post-content h1 {padding:20px 0 0 20px;margin:0;
