@@ -1,21 +1,24 @@
-<!DOCTYPE HTML>
+<?php
+
+require_once('core/db.php');
+require_once('languages/error.php');
+require_once('core/API/users.php');
+require_once('core/API/posts.php');
+require_once('core/API/sections.php');
+require_once('core/init.php');
+
+$posts = new sPost('posts',1);
+
+
+?>
+<!DOCTYPE html>
 <html>
 
 	<head>
-
 	
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="js/bootstrap.min.js"></script>
-		
 		
 		<!--Google fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Economica|Cookie' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Economica|Cookie|Libre+Baskerville' rel='stylesheet' type='text/css'>
 		
 		<!--Engazy style sheet -->
 		<link rel="stylesheet" href="css/style.css">
@@ -36,88 +39,75 @@
 			}
 		</script>
 		
-	
-		<title> :: Page title :: </title>
-		
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		
 	</head>
 	
 	<body>
-		
-		
-		
-		<div class="navbar navbar-inverse navbar-fixed-top">
+		<!-- Header -->
+		<div id="header">
 			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Project name</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#"><i class="icon-home"></i></a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Our Work</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
-					
-				</div>
+					<h1>Enjazy</h1>
 			</div>
 		</div>
-
-		<!-- ======================================= -->
-		
-		<div class="jumbotron">
+		<!-- /Header -->
+	
+		<!-- Navbar -->
+		<div id="navbar">
 			<div class="container">
-				<div class="icons">
-					<ul>
-						<li><i class="icon-facebook-squared"></i></li>
-						<li><i class="icon-twitter"></i></li>
-						<li><i class="icon-gplus"></i></li>
-						<li><i class="icon-rss-alt"></i></li>
-					</ul>
-				</div>
-				
+				<ul>
+					<li><i class="icon-home"></i></li>
+					<li>Services</li>
+					<li>Our Work</li>
+					<li>About Us</li>
+					<li>Contact Us</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /Navbar -->
+		
+		
 			
-				<h1> Hello, world! </h1>
-				<p>This is a template for a simple marketing or informational website.
-				It includes a large callout called the hero unit and three supporting pieces of content.
-				Use it as a starting point to create something more unique.</p>
-				<p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-			</div>
-		</div>
+
+
+		<!-- Post format -->
 		
-		<!-- ======================================= -->
-		<hr class="featurette-divider">
 		
 		<div class="container">
-		
-		<div class="row featurette">
-			<div class="col-md-7">
-				<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		<?php
+		$post = $posts->getAllPosts();
+		for($i = 0; $i < count($post);$i++){
+			echo '
+			<div class="post-container" style="background-image: url(\'images/Eiffel-Tower.jpg\');">
+				<header class="post-content">
+					<h1>'.$post[$i]['subject'].'</h1>
+					<p>
+						'.$post[$i]['content'].'
+					</p>
+					<footer class="post-options">
+						<div class="post-option-left">
+						<p><a href="#">comments(5)</a></p>
+						</div>
+						
+						<div class="post-option-right">
+							<div class="icons">
+								<ul>
+									<li><i class="icon-facebook-squared"></i></li>
+									<li><i class="icon-twitter"></i></li>
+									<li><i class="icon-gplus"></i></li>
+									<li><i class="icon-rss-alt"></i></li>
+								</ul>
+							</div>
+						</div>
+						
+					</footer>
+				</header>
 			</div>
-			<div class="col-md-5">
-				<img class="featurette-image img-responsive" src="images/Eiffel-Tower.jpg" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-			</div>
+			';
+		}
+		?>
 		</div>
+		<!-- /Post format -->
 		
-		</div>
-		
-		
-		
-		
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 	</body>
-	
-	
+
+
 </html>
