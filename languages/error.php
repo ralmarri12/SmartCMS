@@ -25,7 +25,7 @@ define("ERR_POST_ADD_SUB","Error(3): You did not write a subject");
 
 // charters counter,
 $char = 10;
-define("ERR_POST_CHAR","Error(4): The content must have at least ".$char." chartars");
+define("ERR_POST_CHAR","Error(4): The content must have at least 10 chartars");
 
 // this error can not be made by user, if the message/post does not have direction:
 define("ERR_POST_DIR","Error(5): The post does not have direction please inform us if you have this problem");

@@ -17,7 +17,7 @@ class sPost
 		if(empty($array[0])){
 			$errors[] = ERR_POST_ADD_SUB;
 			return false;
-		}elseif(empty($array[1]) || strlen($array[1]) < $_GLOBAL['char']){
+		}elseif(empty($array[1]) || strlen($array[1]) < 10){
 			$errors[] = ERR_POST_CHAR;
 			return false;
 		}elseif(empty($array[2])){
@@ -69,12 +69,15 @@ class sPost
 		
 	}
 	
-	public function getAllPosts(){
+	public function getAllPosts($limit = ""){
             global $db;
 			
-            $query = $db->prepare("SELECT * FROM `".$this->table."`");
+			if($limit != "")
+				$limit = "LIMIT ".$limit;
+			
+            $query = $db->prepare("SELECT * FROM `".$this->table."` ORDER BY `id` DESC ".$limit);
             $query->execute();
-
+			
             if($query->rowCount() > 0)
                     return $query->fetchAll();
             else

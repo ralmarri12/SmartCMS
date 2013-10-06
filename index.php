@@ -39,6 +39,8 @@ $posts = new sPost('posts',1);
 			}
 		</script>
 		
+		
+		<title><?php echo $info['title'];?></title>
 	</head>
 	
 	<body>
@@ -63,17 +65,12 @@ $posts = new sPost('posts',1);
 			</div>
 		</div>
 		<!-- /Navbar -->
-		
-		
-			
-
+	
 
 		<!-- Post format -->
-		
-		
 		<div class="container">
 		<?php
-		$post = $posts->getAllPosts();
+		$post = $posts->getAllPosts(3);
 		for($i = 0; $i < count($post);$i++){
 			echo '
 			<div class="post-container" style="background-image: url(\'images/Eiffel-Tower.jpg\');">
