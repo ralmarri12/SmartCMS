@@ -37,6 +37,6 @@ background-size: 30% 100%;
 .post-content {width:70%}
 .post-content h1 {padding:20px 0 0 20px;margin:0;
 font-family: 'Economica', sans-serif; font-size: 35px; color: #0aa9ba}
-.post-content p {padding:10px 10px 0 20px;margin:0}
+.post-content p {padding:10px 10px 0 20px;margin:0;font-family: 'Libre Baskerville', serif;}
 
 .post-options {padding: 0 0 10px 0}

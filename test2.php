@@ -1,3 +1,8 @@
+
+<?php
+//<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +10,7 @@
 	
 		
 		<!--Google fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Economica|Cookie' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Economica|Cookie|Libre+Baskerville' rel='stylesheet' type='text/css'>
 		
 		<!--Engazy style sheet -->
 		<link rel="stylesheet" href="css/style.css">
