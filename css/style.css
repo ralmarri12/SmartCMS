@@ -1,6 +1,5 @@
-*{margin: 0 auto}
-body{background: #f1f1f1}
-#warp{width: 90%}
+*{margin:0}
+body {background: #f9f9f9;margin:0;}
 #navbar{height: 70px;background: #0bc0d3;border-bottom: 7px #0aa9ba solid}
 #navbar ul {list-style:none;padding:0}
 #navbar ul li{float:left;font-family: 'Economica', sans-serif;color:#fff;
@@ -13,3 +12,31 @@ text-shadow: 1px 1px 1px #000}
 .icons ul {list-style:none}
 .icons ul li{padding: 10px 0 0 0;float:left;color: #cdcdcd;font-size: 20px}
 .icons ul li:hover {color: #727272}
+
+
+.container {
+width: 95%;
+margin: 0 auto
+}
+
+.post-container {
+margin: 10px auto;
+-webkit-border-radius: 30px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius: 30px;
+-moz-border-radius-bottomleft: 4px;
+border-radius: 30px;
+border-bottom-left-radius: 4px;
+
+background: #f1f1f1;
+background-repeat:no-repeat;
+background-position:right;
+background-size: 30% 100%;
+}
+
+.post-content {width:70%}
+.post-content h1 {padding:20px 0 0 20px;margin:0;
+font-family: 'Economica', sans-serif; font-size: 35px; color: #0aa9ba}
+.post-content p {padding:10px 10px 0 20px;margin:0}
+
+.post-options {padding: 0 0 10px 0}

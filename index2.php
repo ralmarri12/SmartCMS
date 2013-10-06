@@ -4,16 +4,6 @@
 	<head>
 
 	
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="js/bootstrap.min.js"></script>
-		
-		
 		<!--Google fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Economica|Cookie' rel='stylesheet' type='text/css'>
 		
