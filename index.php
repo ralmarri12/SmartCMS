@@ -47,7 +47,7 @@ $posts = new sPost('posts',1);
 		<!-- Header -->
 		<div id="header">
 			<div class="container">
-					<h1>SmartCMS</h1>
+					<h1>Emir's Website</h1>
 			</div>
 		</div>
 		<!-- /Header -->

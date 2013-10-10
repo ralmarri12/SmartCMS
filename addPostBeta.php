@@ -22,7 +22,6 @@ if(!empty($_POST))
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 
@@ -35,6 +34,7 @@ if(!empty($_POST))
 			Subject: <input type="text" name="subject"><br>
 			Content:<br>
 			<textarea name="content" cols="40" rows="4"></textarea><br>
+			Images: <input type="file" name="image">
 			<input type="submit">
 		</form>
 	</body>
